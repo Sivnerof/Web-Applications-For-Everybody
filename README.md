@@ -20,7 +20,7 @@
 
     * We briefly cover the basics of cascading Style Sheets (CSS) that allow us to style the markup for web pages.
 
-4. [Installing PHP and SQL](./Installing-PHP-And-SQL/ "Installing PHP and SQL Folder")
+4. [Installing PHP and SQL](https://www.wa4e.com/lessons/install "Installing PHP and SQL Directions")
 
     * The first task is to work through the installation steps including installing a text editor, installing MAMP or XAMPP (or equivalent), creating a MySql Database, and writing a PHP program.
 

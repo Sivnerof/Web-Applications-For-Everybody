@@ -10,23 +10,29 @@
     <h1>MD5 Cracker</h1>
     <p>This application takes an MD5 hash of a four digit pin and checks all 10,000 possible four digit PIN numbers to determine the correct one.</p>
 
-    <pre>
     <?php
-        echo "<p>Debug Output:</p>";
         if (isset($_GET['md5'])) {
+            $md5 = $_GET['md5'];
+            $result = "<p>PIN: Not Found</p>";
+            echo "<table><caption>Debug Output</caption><thead><tr><td>HASH</td><td>PIN</td></tr></thead>";
             for ($x = 0; $x < 10000; $x++) {
                 if ($x < 15){
+                    echo "<tr><td>";
                     echo (string)md5($x);
-                    echo "  ";
+                    echo "</td><td>";
                     echo $x;
+                    echo "</td></tr>";
+                } else if ($x === 15){
+                    echo "</table>";
                 }
-                if ((string)md5($x) === $_GET['md5']){
-                    echo $x;
+                if ((string)md5($x) === $md5){
+                    $result = "<p>PIN FOUND: $x</p>";
+                    break;
                 }
             }
+            echo $result;
         }
     ?>
-    </pre>
 
     <form method="GET">
         <input type="text" name="md5" size="40">

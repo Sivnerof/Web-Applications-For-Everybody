@@ -12,25 +12,26 @@
 
     <?php
         if (isset($_GET['md5'])) {
+            $time_pre = microtime(true);
             $md5 = $_GET['md5'];
             $result = "<p>PIN: Not Found</p>";
+            $count = 0;
             echo "<table><caption>Debug Output</caption><thead><tr><td>HASH</td><td>PIN</td></tr></thead>";
             for ($x = 0; $x < 10000; $x++) {
+                $count = $x + 1;
                 if ($x < 15){
                     echo "<tr><td>";
                     echo (string)md5($x);
-                    echo "</td><td>";
-                    echo $x;
-                    echo "</td></tr>";
-                } else if ($x === 15){
-                    echo "</table>";
+                    echo "</td><td>$x</td></tr>";
                 }
                 if ((string)md5($x) === $md5){
                     $result = "<p>PIN FOUND: $x</p>";
                     break;
                 }
             }
-            echo $result;
+            $time_post = microtime(true);
+            $time_elapsed = $time_post-$time_pre;
+            echo "</table><p>Elapsed time: $time_elapsed</p><p>Total Checks: $count</p>$result";
         }
     ?>
 

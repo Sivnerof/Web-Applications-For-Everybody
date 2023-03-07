@@ -1,3 +1,14 @@
+<?php
+if (! isset($_GET['name']) || strlen($_GET['name']) < 1){
+    die("Name parameter missing");
+}
+
+if (isset($_POST['logout'])){
+    header('Location: index.php');
+    return;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,18 +16,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors | Game</title>
+    <?php require_once "bootstrap.php";?>
 </head>
 <body>
-    /*
-        In order to protect the game from being played without the user properly logging in,
-        the game.php must first check the session to see if the user's name is set and
-        if the user's name is not set in the session the game.php must stop immediately using the PHP die() function:
-            die("Name parameter missing");
-        To test, navigate to game.php manually without logging in - it should fail with "Name parameter missing".
-        If the user is logged in, 
-        they should be presented with a drop-down menu showing the options Rock, Paper, Scissors, and Test as well as buttons labeled "Play" and "Logout".
-        If the Logout button is pressed the user should be redirected back to the index.php page using:
-            header('Location: index.php');
+    <h1>Rock, Paper, Scissors</h1>
+    <form method="POST">
+        <label for="rps-selection">Choose your weapon:</label>
+        <select name="human" id="rps-selection">
+            <option value="-1">--Please choose an option--</option>
+            <option value="0">Rock</option>
+            <option value="1">Paper</option>
+            <option value="2">Scissors</option>
+            <option value="3">Test</option>
+        </select>
+        <button  type="submit" name="logout" value="logout">Logout</button>
+        <button type="submit" value="Play">Play</button>
+    <form>
+    <!--
         If the user selects, Rock, Paper, or Scissors and presses "Play", the game chooses random computer throw,
         and scores the game and prints out the result of the game:
         Your Play=Paper Computer Play=Paper Result=Tie
@@ -44,6 +60,6 @@
         The output of this should look as follows:
         This will allow you to make sure that your check() function properly handles all combinations of the possible plays without
         having to play for a long time as the computer makes random plays.
-    */
+    -->
 </body>
 </html>

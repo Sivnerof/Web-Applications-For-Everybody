@@ -7,7 +7,27 @@ if (isset($_POST['logout'])){
     header('Location: index.php');
     return;
 }
+
+$names = array('Rock', 'Paper', 'Scissors');
+$human = isset($_POST["human"]) ? $_POST['human']+0 : -1;
+
+$computer = 0;
+$computer = rand(0,2);
+
+function check($computer, $human) {
+    if ($human === $computer) {
+        return "Tie";
+    } else if ( ($human === 0 && $computer === 2) || ($human === 1 && $computer === 0) || ($human === 2 && $computer === 1)) {
+        return "You Win";
+    } else {
+        return "You Lose";
+    }
+}
+
+$result = check($computer, $human);
+
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -20,6 +40,13 @@ if (isset($_POST['logout'])){
 </head>
 <body>
     <h1>Rock, Paper, Scissors</h1>
+    <?php
+    if ( isset($_REQUEST['name']) ) {
+        echo "<p>Welcome: ";
+        echo htmlentities($_REQUEST['name']);
+        echo "</p>\n";
+    }
+    ?>
     <form method="POST">
         <label for="rps-selection">Choose your weapon:</label>
         <select name="human" id="rps-selection">
@@ -32,34 +59,21 @@ if (isset($_POST['logout'])){
         <button  type="submit" name="logout" value="logout">Logout</button>
         <button type="submit" value="Play">Play</button>
     <form>
-    <!--
-        If the user selects, Rock, Paper, or Scissors and presses "Play", the game chooses random computer throw,
-        and scores the game and prints out the result of the game:
-        Your Play=Paper Computer Play=Paper Result=Tie
-        The computation as to whether the user wins, loses, or ties is to be done in a function named check() that returns a string telling the user what happenned:
-        // This function takes as its input the computer and human play
-        // and returns "Tie", "You Lose", "You Win" depending on play
-        // where "You" is the human being addressed by the computer
-        function check($computer, $human) {
-            ...
-                return "Tie";
-            ...
-                return "You Win";
-            ...
-                return "You Lose";
-            ...
-        }
-        The "Test" option requires that you write two nested for loops that tests all combinations of possible human and computer play combinations:
-        for($c=0;$c< 3;$c++) {
-            for($h=0;$h< 3;$h++) {
+    <pre>
+    <?php
+    if ( $human == -1 ) {
+        print "Please select a strategy and press Play.\n";
+    } else if ( $human == 3 ) {
+        for($c=0;$c<3;$c++) {
+            for($h=0;$h<3;$h++) {
                 $r = check($c, $h);
                 print "Human=$names[$h] Computer=$names[$c] Result=$r\n";
             }
         }
-        The $names variable contains the strings "Rock", "Paper", and "Scissors" in this example.
-        The output of this should look as follows:
-        This will allow you to make sure that your check() function properly handles all combinations of the possible plays without
-        having to play for a long time as the computer makes random plays.
-    -->
+    } else {
+        print "Your Play=$names[$human] Computer Play=$names[$computer] Result=$result\n";
+    }
+    ?>
+    </pre>
 </body>
 </html>

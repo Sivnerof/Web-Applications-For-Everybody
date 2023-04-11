@@ -48,7 +48,7 @@
 
     * Covering database design with multiple tables, foreign keys, and the JOIN operation..
 
-11. [PHP Objects](./PHP-Objects/ "PHP Objects Folder")
+11. [PHP Objects](https://www.wa4e.com/lessons/php-objects "PHP Objects Lesson")
 
     * We look at the object oriented pattern in the PHP language.
 

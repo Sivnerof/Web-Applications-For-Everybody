@@ -52,47 +52,47 @@
 
     * We look at the object oriented pattern in the PHP language.
 
-12. [PHP and MySQL](./PHP-And-MySQL/ "PHP And MySQL Folder")
+12. [PHP and MySQL](https://www.wa4e.com/lessons/php-mysql "PHP And MySQL Lesson")
 
     * We look at how we connect to a MySQL using the Portable Data Objects (PDO) library and issue SQL commands in the the PHP language.
 
-13. [PHP Cookies and Sessions](./PHP-Cookies-And-Sessions/ "PHP Cookies And Sessions Folder")
+13. [PHP Cookies and Sessions](https://www.wa4e.com/lessons/php-cookies "PHP Cookies And Sessions Lesson")
 
     * We look at how PHP uses cookies and manages session data.
 
-14. [PHP Routing, Redirect and Authentication](./PHP-Routing-Redirect-And-Authentication/ "PHP Routing, Redirect, and Authentication Folder")
+14. [PHP Routing, Redirect and Authentication](https://www.wa4e.com/lessons/php-sessions "PHP Routing, Redirect, and Authentication Lesson")
 
     * We look at how PHP avoids double posting data, how flash messages are implemented, and how we use a session to log in users in web applications.
 
-15. [Building a CRUD Application](./Building-A-CRUD-App/ "Building A CRUD App Folder")
+15. [Building a CRUD Application](https://www.wa4e.com/lessons/php-crud "Building A CRUD App Lesson")
 
     * Now we build our first 'complete' application that has multiple screens to Create, Read, Update and Delete (CRUD) our data. This brings all the previous concepts together and will form the basis for all later web applications.
 
-16. [Basic JavaScript](./Basic-JavaScript/ "Basic JavaScript Folder")
+16. [Basic JavaScript](https://www.wa4e.com/lessons/javascript "Basic JavaScript Lesson")
 
     * We talk a quick look at the JavaScript language. We assume that you already know PHP - so it is a pretty quick introduction focusing on what is different about JavaScript.
 
-17. [JavaScript Objects](./JavaScript-Objects/ "JavaScript Objects Folder")
+17. [JavaScript Objects](https://www.wa4e.com/lessons/js-oo "JavaScript Objects Lesson")
 
     * We do a quick look at how the JavaScript language supports the Object-Oriented pattern.
 
-18. [jQuery](./jQuery/ "jQuery Folder")
+18. [jQuery](https://www.wa4e.com/lessons/jquery "jQuery Lesson")
 
     * This is a brief introduction to the JQuery library which is widely used to do in-browser manipulation of the Document Object Model(DOM) and event handling.
 
-19. [JSON - JavaScript Object Notation](./JSON/ "JSON Folder")
+19. [JSON - JavaScript Object Notation](https://www.wa4e.com/lessons/json "JSON Lesson")
 
     * In this section we look at JavaScript Object Notation (JSON). JSON is commonly used as a syntax to exchange data between code running on the server (i.e. in PHP) and code running in the browser (JavaScript/JQuery).
 
-20. [Handlebars UI Templates](./Handlebars-UI/ "Handlebars UI Folder")
+20. [Handlebars UI Templates](https://www.wa4e.com/lessons/handlebars "Handlebars UI Lesson")
 
     * In this section we look at moving the templates to build HTML fragments from the server (PHP) in to the browser (JavaScript) using the Handlebars library.
 
-21. [Advanced SQL](./Advanced-SQL/ "Advanced SQL Folder")
+21. [Advanced SQL](https://www.wa4e.com/lessons/sql-advanced "Advanced SQL Lesson")
 
     * This section covers some advanced SQL topics.
 
-22. [SQL Transactions](./SQL-Transactions/ "SQL Transactions Folder")
+22. [SQL Transactions](https://www.wa4e.com/lessons/sql-transactions "SQL Transactions Lesson")
 
     * This section covers SQL transactions.
 
